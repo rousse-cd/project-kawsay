@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${TituloPagina}"></title>
+<link rel="stylesheet" href="/bootstrap/bootstrap.min.css"  >
+<script src="/boostrap/bootstrap.jquery.slim.min.js"></script>
+<script src="/boostrap/bootstrap.bundle.min.js"></script>
+</head>
+<body class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-green" style="background-color:#96C689">
+  <a class="navbar-brand" href="#">KAWSAY</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">PREGUNTAS FRECUENTES</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          NOSOTROS
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">ASOCIADOS</a></li>
+          <li><a class="dropdown-item" href="#">SERVICIOS</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#"></a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">LOGIN</a>
+      </li>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div style="height:50px"></div>
+   <form style="margin:auto; width:50%; border:2px solid purple; padding: 20px">
+   <h2>LOGIN</h2><br>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10 offset-sm-2">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+          Recordar contraseña
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <center><button type="submit" class="btn btn-primary" style="background-color:purple">Sign in</button></center>
+    </div>
+  </div>
+</form>
+<!-- ---
+<div style="height:50px"></div>
+<div style="margin:auto; width:100%">
+<center>
+<button type="button" class="btn btn-outline-success"><a href="integrantes.html">INTEGRANTES</a></button>
+</center>
+
+ -->
+
+</div>
+   
+   
+   
+   
+   
+   
+   
+   
+   <!-- <h1 th:text="${titulo}"></h1>
+     <hr>
+     <div>
+         <ul th:each= "personaje: ${listita}">
+             <li th:text = "${personaje.nombres}"></li>
+             <li th:text = "${personaje.alias}"></li>
+             <li th:text = "${personaje.tipoFruta}"></li>
+             <li th:text = "${personaje.habilidad}"></li>
+             <li th:text = "${personaje.tripulacion}"></li>
+             <li th:text = "${personaje.recompensa}"></li>
+         </ul>
+     </div>- -->
+     
+  
+
+</body>
+</html>
