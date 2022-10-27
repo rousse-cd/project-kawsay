@@ -22,7 +22,7 @@ public class HomeController {
 	
 	
 	//@RequestMapping("/home")
-	@GetMapping({"/home","/inicio","/Home","/Inicio","/integrantes" })
+	@GetMapping({"/home","/inicio","/Home","/Inicio"})
 	public String HolaMundo( Model model) {
 		
 		//Instanciando un personaje1 del tipo Personaje
@@ -62,6 +62,14 @@ public class HomeController {
 		model.addAttribute("titulo", "Seccion J98 - Demo Listado");
 		model.addAttribute("listita", listita);
 		return "Home";
+	}
+	@GetMapping({"/integrantes"})
+	public String integrantes( Model model) {
+		return "integrantes";
+	}
+	@GetMapping({"/catalogo"})
+	public String catologo( Model model) {
+		return "catalogo";
 	}
 
 }
