@@ -2,73 +2,8 @@ body{
 	background-color:white;
 	
 }
-.pie-pagina{
-    width: 100%;
-    background-color: #D0ECE7 ;
-}
-.pie-pagina .grupo-1{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
-    padding: 45px 0px;
-}
-.pie-pagina .grupo-1 .box figure{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pie-pagina .grupo-1 .box figure label{
-    width: 250px;
-    font-size: 60px;
-}
-.pie-pagina .grupo-1 .box h2{
-    color: black;
-    margin-bottom: 25px;
-    font-size: 20px;
-}
-.pie-pagina .grupo-1 .box p{
-    color: #777;
-    margin-bottom: 10px;
-}
-.pie-pagina .grupo-1 .red-social a{
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    margin-right: 10px;
-    background-color: #230d33;
-    text-align: center;
-    transition: all 300ms ease;
-}
-.pie-pagina .grupo-1 .red-social a:hover{
-    color: #bd83e4;
-}
-.pie-pagina .grupo-2{
-    background-color: #17A589 ;
-    padding: 15px 10px;
-    text-align: center;
-    color: #fff;
-}
-.pie-pagina .grupo-2 small{
-    font-size: 15px;
-}
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
-    }
-}
-.pie-pagina .logo{
-	color:black;
+.navbar-brand{
+	padding-left:10%
 }
 
 .image-container{
@@ -81,6 +16,8 @@ body{
   width: 100%;
   grid-template-columns: 800px 500px;
   justify-content: center;
+    box-shadow: 10px 10px 40px #592A08;
+   border: 1px solid #ccc;
 }
 
 #areaA {
@@ -146,4 +83,83 @@ form input[type="radio"]{
     justify-content:center;
     align-items:center;
     
+}
+.footer{
+    background: #fff;
+}
+
+.footer .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 20px;
+    color:var(--black);
+    padding:15px;
+}
+
+.footer .box-container .box h3 i{
+    color:#96C689;
+}
+
+.footer .box-container .box .links{
+    display: block;
+    font-size: 15px;
+    color:var(--light-color);
+    padding:1rem 0;
+}
+
+.footer .box-container .box .links i{
+    color:#96C689;
+    padding-right: .5rem;
+}
+
+.footer .box-container .box .links:hover i{
+    padding-right: 2rem;
+}
+
+
+.footer .box-container .box p{
+    line-height: 1.8;
+    font-size: 15px;
+    color:var(--light-color);
+    padding:1rem 0;
+}
+
+.footer .box-container .box .share a{
+    height:40px;
+    width:40px;
+    line-height:40px;
+    border-radius: .5rem;
+    font-size: 20px;
+    color:var(--black);
+    margin-right: .2rem;
+    background: #eee;
+    text-align: center;
+}
+
+.footer .box-container .box .share a:hover{
+    background: #96C689;
+    color: #fff;
+}
+.footer .box-container .box .email{
+    width: 100%;
+    margin:.7rem 0;
+    padding:10px;
+    border-radius: .5rem;
+    background: #eee;
+    font-size: 15px;
+    color:var(--black);
+    text-transform: none;
+}
+
+.footer .credit{
+    text-align: center;
+    margin-top: 2rem;
+    padding:20px;
+    font-size: 20px;
+    color:var(--black);
+    border-top: var(--border);
 }
