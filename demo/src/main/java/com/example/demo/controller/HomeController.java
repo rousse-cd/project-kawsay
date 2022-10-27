@@ -63,5 +63,10 @@ public class HomeController {
 		model.addAttribute("listita", listita);
 		return "Home";
 	}
+	//@RequestMapping("/home")
+		@GetMapping({"/nosotros" })
+		public String nosotros( Model model) {
+			return "nosotros";
+		}
 
 }
