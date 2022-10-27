@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${TituloPagina}"></title>
+<link rel="stylesheet" href="/bootstrap/bootstrap.min.css"  >
+<link rel="stylesheet" href="/bootstrap/registro.css">
+<script src="/boostrap/bootstrap.jquery.slim.min.js"></script>
+<script src="/boostrap/bootstrap.bundle.min.js"></script>
+</head>
+<body> 
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-green" style="background-color:#96C689">
+  <a class="navbar-brand" href="#">KAWSAY</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">NOSOTROS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CATÁLOGO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">LOGIN</a>
+      </li>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav><br><br>
+<div class="container">
+
+
+
+<div id="grid">
+  <div id="areaA">
+
+<div style="height:50px"></div>
+   <form style="margin:auto; width:80%; border:2px solid purple; padding: 20px">
+   <center><h2>REGISTRO</h2><br></center>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Nombres</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Apellidos</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+    </div>
+     <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Edad</label>
+    <div class="col-sm-10">
+      <input type="number" min=18 value="" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+  
+  
+    
+  
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Correo</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">DNI</label>
+    <div class="col-sm-10">
+      <input type="email" maxlength="8" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+ 
+     <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Telefono</label>
+    <div class="col-sm-10">
+      <input type="email" maxlength="9" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+  
+  
+  
+  <div class="form-group row">
+  <label for="inputEmail3" class="col-sm-2 col-form-label">Género</label>
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <input type="radio" name="gender" id="dot-3">
+                        <div class="category">
+                            <label for="dot-1">
+                               <span class="dot one"></span>
+                               <span class="gender">Hombre</span>
+                            </label>
+                            <label for="dot-2">
+                               <span class="dot two"></span>
+                               <span class="gender">Mujer</span>
+                            </label>
+                            <label for="dot-3">
+                               <span class="dot three"></span>
+                               <span class="gender">Prefiero no decirlo</span>
+                            </label>
+                        </div></div>
+
+
+    
+      <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3">
+    </div>
+    </div>
+      <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Confirmar contraseña</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3">
+    </div>
+    </div>
+
+    
+    
+ 
+  <div class="form-group row">
+    <div class="col-sm-10 offset-sm-2">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+          Acepta los terminos y condiciones
+        </label>
+      </div>
+    </div>
+  </div>
+  
+    <div class="boton">
+      <button type="submit" class="btn btn-primary" style="background-color:purple" >REGISTRARME</button>
+    
+  </div></form></div>
+  <div id="areaB">
+
+
+  <div class="image-container">
+            <img src="/bootstrap/2.jpg" width=600px>
+         </div>   
+   
+
+</div></div>
+</div>
+
+
+
+
+
+
+
+<br><br>
+
+<footer class="pie-pagina">
+            <div class="grupo-1">
+                <div class="box">
+                    <figure>
+                        <a href="#"><!-----
+                            <img src="img/logotipo-sleedw.svg" alt="Logo de SLee Dw">---->
+                            <label class="logo"> KAWSAY</label>
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>Información de contacto</h2>
+                    <p>Correo electrónico: <br>
+                       KAWSAY@gmail.com</p>
+                    <p>Telefóno: <br>
+                        +51 978 264 151</p>
+                </div>
+                <div class="box">
+                    <h2>SIGUENOS</h2>
+                    <div class="red-social">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo-2">
+                <small>&copy; 2021 <b>KAWSAY</b> - Todos los Derechos Reservados.</small>
+            </div>
+        </footer>
+
+</body>
+</html>

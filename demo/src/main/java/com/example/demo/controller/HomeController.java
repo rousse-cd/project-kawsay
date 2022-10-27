@@ -63,5 +63,10 @@ public class HomeController {
 		model.addAttribute("listita", listita);
 		return "Home";
 	}
+	@GetMapping({"/registro" })
+	public String registro( Model model) {
+		
+		return "registro";
+	
 
 }
