@@ -9,8 +9,34 @@
 	
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-green" style="background-color:#96C689">
+  <a class="navbar-brand" href="#">KAWSAY</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+      <li class="nav-item active">
+        <a class="nav-link" href="Home">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">NOSOTROS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CATÁLOGO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">LOGIN</a>
+      </li>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 	
-	<div class="container">
+	<div class="contenedor">
 	<h2 class="login">Login</h2><br>
 	<form action="main.html">
 		<div class="form-group">
@@ -28,18 +54,21 @@
     		<label class="form-check-label" for="exampleCheck1">Recordarmelo</label>
   		</div>
         
-        <div class="inputBx">
+        <div class="letras">
             <p>¿Olvidaste tu contraseña? <span class="span"><a href="#">Click Aquí</a></span></p>
         </div>
         
         <div class="form-group">
-        	<button type="submit" class="btn btn-primary">Submit</button>
+        	<button type="submit" class="boton">Ingresar</button>
         </div>
         
-        <div class="inputBx">
+        <div class="letras">
             <p>¿No tienes una cuenta? <span class="span"><a href="registro_login.html">Registrarse</a></span></p>
         </div>
 	</form>
+	</div>
+	<div class="img">
+		<img alt="imagen" src="/images/mundito1.png">
 	</div>
 
 </body>
