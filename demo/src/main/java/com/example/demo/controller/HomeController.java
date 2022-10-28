@@ -82,5 +82,9 @@ public class HomeController {
 	public String catologo( Model model) {
 		return "catalogo";
 	}
+	@GetMapping({"/login"})
+	public String Login( Model model) {
+		return "login";
+	}
 
 }
