@@ -22,7 +22,7 @@ public class HomeController {
 	
 	
 	//@RequestMapping("/home")
-	@GetMapping({"/home","/inicio","/Home","/Inicio"})
+	@GetMapping({"/home","/inicio","/Home","/Inicio","/integrantes"})
 	public String HolaMundo( Model model) {
 		
 		//Instanciando un personaje1 del tipo Personaje
