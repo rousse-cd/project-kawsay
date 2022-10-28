@@ -22,6 +22,7 @@ public class HomeController {
 	
 	
 	//@RequestMapping("/home")
+
 	@GetMapping({"/home","/inicio","/Home","/Inicio","/integrantes"})
 	public String HolaMundo( Model model) {
 		
@@ -63,6 +64,13 @@ public class HomeController {
 		model.addAttribute("listita", listita);
 		return "Home";
 	}
+
+	
+	@GetMapping({"/nosotros" })
+	public String nosotros( Model model) {
+		return "nosotros";
+	}
+
 	@GetMapping({"/integrantes"})
 	public String integrantes( Model model) {
 		return "integrantes";
