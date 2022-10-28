@@ -66,10 +66,8 @@ public class HomeController {
 	}
 	@GetMapping({"/registro" })
 	public String registro( Model model) {
-		
 		return "registro";
-	
-
+	}
 	
 	@GetMapping({"/nosotros" })
 	public String nosotros( Model model) {
