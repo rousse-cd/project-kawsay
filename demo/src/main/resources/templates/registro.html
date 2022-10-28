@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${TituloPagina}"></title>
+<link rel="stylesheet" href="/bootstrap/bootstrap.min.css"  >
+<link rel="stylesheet" href="/bootstrap/registro.css">
+<script src="/boostrap/bootstrap.jquery.slim.min.js"></script>
+<script src="/boostrap/bootstrap.bundle.min.js"></script>
+</head>
+<body> 
+
+<nav class="navbar navbar-expand-lg navbar-light bg-green" style="background-color:#96C689">
+  <a class="navbar-brand" href="#">KAWSAY</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+      <li class="nav-item">
+        <a class="nav-link" href="#">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">NOSOTROS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CATÁLOGO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">LOGIN</a>
+      </li>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<br><br>
+<div class="container">
+
+
+
+<div id="grid">
+  <div id="areaA">
+
+<div style="height:50px"></div>
+   <form style="margin:auto; width:80%; border:2px solid purple; padding: 20px">
+   <center><h2>REGISTRO</h2><br></center>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Nombres</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Apellidos</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+    </div>
+     <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Edad</label>
+    <div class="col-sm-10">
+      <input type="number" min=18 value="" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+  
+  
+    
+  
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Correo</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">DNI</label>
+    <div class="col-sm-10">
+      <input type="email" maxlength="8" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+ 
+     <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Telefono</label>
+    <div class="col-sm-10">
+      <input type="email" maxlength="9" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+  
+  
+  
+  <div class="form-group row">
+  <label for="inputEmail3" class="col-sm-2 col-form-label">Género</label>
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <input type="radio" name="gender" id="dot-3">
+                        <div class="category">
+                            <label for="dot-1">
+                               <span class="dot one"></span>
+                               <span class="gender">Hombre</span>
+                            </label>
+                            <label for="dot-2">
+                               <span class="dot two"></span>
+                               <span class="gender">Mujer</span>
+                            </label>
+                            <label for="dot-3">
+                               <span class="dot three"></span>
+                               <span class="gender">Prefiero no decirlo</span>
+                            </label>
+                        </div></div>
+
+
+    
+      <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3">
+    </div>
+    </div>
+      <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Confirmar contraseña</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3">
+    </div>
+    </div>
+
+    
+    
+ 
+  <div class="form-group row">
+    <div class="col-sm-10 offset-sm-2">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+          Acepta los terminos y condiciones
+        </label>
+      </div>
+    </div>
+  </div>
+  
+    <div class="boton">
+      <button type="submit" class="btn btn-primary" style="background-color:purple" >REGISTRARME</button>
+    
+  </div></form></div>
+  <div id="areaB">
+
+
+  <div class="image-container">
+            <img src="/bootstrap/2.jpg" width=600px>
+         </div>   
+   
+
+</div></div>
+</div>
+
+
+
+
+
+
+
+<br><br>
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3> Kawsay <i class="fa-solid fa-earth-americas"></i> </h3>
+            <p>Centro de intercambio de residuos reciclables, con el objetivo de generar un mejor desarrollo sostenible a nivel nacional.</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Información de contacto</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> kawsay_recycling@gmail.com </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Av. Arequipa 4563, Lima - Perú </a>
+        </div>
+
+        <div class="box">
+            <h3>Enlaces directos</h3>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> inicio </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> nosotros </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> catalogo </a>
+        </div>
+
+        <div class="box">
+            <h3>Noticias</h3>
+            <p>suscríbase para recibir las actualizaciones</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="Suscríbete" class="btn" style="background-color:#96C689">
+            <img src="image/payment.png" class="payment-img" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit"> 
+                <small>&copy; 2022 <b>Kawsay</b> - Todos los Derechos Reservados.</small>
+             </div>
+
+</section>
+</body>
+</html>
