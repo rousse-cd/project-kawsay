@@ -10,35 +10,35 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.crud.demo.modelo.Persona;
-import com.crud.demo.serviceInterface.IPersonaService;
+import com.example.demo.models.Catalogo;
+import com.example.demo.serviceinterface.ICatalogoService;
 
 @Controller
 @RequestMapping
-public class PersonaControler {
+public class CatalogoControler {
 	
 	@Autowired
-	private IPersonaService service;
+	private ICatalogoService service;
 	
 	@GetMapping("/listar")
 	public String listar(Model model) {
-		model.addAttribute("personas", service.listar());
+		model.addAttribute("catalogos", service.listar());
 		return "index";
 	}
 	@GetMapping("/listar/{id}")
 	public String listarId(@PathVariable int id,Model model) {
-		model.addAttribute("persona", service.listarId(id));
+		model.addAttribute("catalogo", service.listarId(id));
 		return "form";
 	}
 	
 	@GetMapping("/new")
 	public String nuevo(Model model) {
-		model.addAttribute("persona", new Persona());
+		model.addAttribute("catalogo", new Catalogo());
 		return "form";
 	}
 	
 	@PostMapping("/save")
-	public String save(@Valid Persona p,Model model) {
+	public String save(@Valid Catalogo p,Model model) {
 		int id=service.save(p);
 		if(id==0) {
 			return "form";

@@ -80,7 +80,7 @@ public class HomeController {
 	}
 	@GetMapping({"/catalogo"})
 	public String catologo( Model model) {
-		return "catalogo";
+		return "catalogo2";
 	}
 	@GetMapping({"/login"})
 	public String Login( Model model) {

@@ -6,30 +6,30 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.crud.demo.modelo.Persona;
-import com.crud.demo.modeloDAO.IPersona;
-import com.crud.demo.serviceInterface.IPersonaService;
+import com.example.demo.models.Catalogo;
+import com.example.demo.modelsDAO.ICatalogo;
+import com.example.demo.serviceinterface.ICatalogoService;
 
 @Service
-public class PersonaService implements IPersonaService {
+public class CatalogoService implements ICatalogoService {
 
 	@Autowired
-	private IPersona dao;
+	private ICatalogo dao;
 	
 	@Override
-	public List<Persona> listar() {		
-		return (List<Persona>) dao.findAll();
+	public List<Catalogo> listar() {		
+		return (List<Catalogo>) dao.findAll();
 	}
 
 	@Override
-	public Optional<Persona> listarId(int id) {		
+	public Optional<Catalogo> listarId(int id) {		
 		return dao.findById(id);
 	}
 
 	@Override
-	public int save(Persona p) {
+	public int save(Catalogo p) {
 		int res=0;
-		Persona per=dao.save(p);
+		Catalogo per=dao.save(p);
 		if(!per.equals(null)) {
 			res=1;
 		}

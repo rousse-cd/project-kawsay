@@ -3,9 +3,9 @@ package com.example.demo.modelsDAO;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.crud.demo.modelo.Persona;
+import com.example.demo.models.Catalogo;
 
 @Repository
-public interface IPersona extends CrudRepository<Persona, Integer>{
+public interface ICatalogo extends CrudRepository<Catalogo, Integer>{
 
 }
