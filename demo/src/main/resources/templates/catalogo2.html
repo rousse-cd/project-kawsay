@@ -22,7 +22,7 @@
 			<tbody>
 				<tr th:each="p:${catalogos}">
 					<td th:text="${p.id}"></td>
-					<td><img th:src="@{'/uploads/'+${p.image}}" width="20%"></td>
+					<td><img th:src="@{'/uploads/'} + ${p.image}" th:alt="${p.image}" width="20%"></td>
 					<td th:text="${p.nombre}"></td>
 					<td th:text="${p.cantidad}"></td>
 					<td th:text="${p.puntos}"></td>
