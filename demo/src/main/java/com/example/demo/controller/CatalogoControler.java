@@ -32,7 +32,7 @@ public class CatalogoControler {
 	@GetMapping("/listar")
 	public String listar(Model model) {
 		model.addAttribute("catalogos", service.listar());
-		return "catalogo2";
+		return "catalogo";
 	}
 	@GetMapping("/listar/{id}")
 	public String listarId(@PathVariable int id,Model model) {
