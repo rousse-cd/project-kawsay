@@ -83,7 +83,7 @@ public class UsuarioController {
 	public String ListarUsuario(Model model) {
 
 		model.addAttribute("TituloPagina", titlePage);
-		model.addAttribute("titulo", "Formuario Usuario");
+		model.addAttribute("titulo", "Formulario Usuario");
 		ResponseUsuario<Usuario> rspta = InterfaceUsuario1.listarUsuario();
 
 		if (rspta.getEstado()) {
