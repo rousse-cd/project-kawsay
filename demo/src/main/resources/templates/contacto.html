@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Nosotros</title>
+<link rel="stylesheet" href="/css/nosotros.css" />
+<link rel="stylesheet" href="/css/footer.css" />
+<link rel="stylesheet" href="/bootstrap/bootstrap.min.css"  />
+<script src="/boostrap/bootstrap.jquery.slim.min.js"></script>
+<script src="/boostrap/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/35de4c0fd7.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-green" style="background-color:#96C689">
+  <a class="navbar-brand" href="Home">KAWSAY</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+      <li class="nav-item">
+        <a class="nav-link" href="Home">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="nosotros">NOSOTROS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="listar">CATÁLOGO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contacto">CONTACTO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login">LOGIN</a>
+      </li>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class=prueba1></div>
+<section class="home" id="home">
+
+    <div class="content">
+        <h3><span>Bienvenidos</span> a Kawsay</h3>
+        <p>Centro de intercambio de residuos reciclables, con el objetivo de generar un mejor desarrollo sostenible a nivel nacional.</p>
+    </div>
+
+</section>
+
+
+<div class="container mt-4">
+	<a class="btn btn-primary" th:href="@{/new}">Agregar Nuevo</a>
+		<table border="1" class="table">
+			<thead style="background-color: #5BA5EA">
+				<tr>
+					<th>ID</th>
+					
+					<th>Nombres</th>
+					<th>Apellidos</th>					
+					<th>Correo</th>
+					<th>Asunto</th>
+					<th>Mensaje</th>
+					<th>Acciones</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contacto:${contactos}">
+					<td th:text="${contacto.id}"></td>
+					<td th:text="${contacto.nombre}" ></td>
+					<td th:text="${contacto.apellido}"></td>
+					<td th:text="${contacto.correo}"></td>
+					<td th:text="${contacto.asunto}"></td>
+					<td th:text="${contacto.mensaje}"></td>
+					<td>
+					<a th:href="@{/editar/}+${contacto.id}"><button type="button" class="btn btn-success">editar</button></a>
+					<a th:href="@{/eliminar/}+${contacto.id}" href="#"><button type="button" class="btn btn-danger">eliminar</button></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+
+
+
+
+
+
+
+
+<div style="width: 100%; height: 10px; background-color: #96C689"></div>
+<!-- footer -->
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3> Kawsay <i class="fa-solid fa-earth-americas"></i> </h3>
+            <p>Centro de intercambio de residuos reciclables, con el objetivo de generar un mejor desarrollo sostenible a nivel nacional.</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Información de contacto</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> kawsay_recycling@gmail.com </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Av. Arequipa 4563, Lima - Perú </a>
+        </div>
+
+        <div class="box">
+            <h3>Enlaces directos</h3>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> inicio </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> nosotros </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> catalogo </a>
+            <a href="contacto" class="links"> <i class="fas fa-arrow-right"></i> contacto </a>
+        </div>
+
+        <div class="box">
+            <h3>Noticias</h3>
+            <p>suscríbase para recibir las actualizaciones</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="Suscríbete" class="btn" style="background-color:#96C689">
+            <img src="image/payment.png" class="payment-img" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit"> 
+                <small>&copy; 2022 <b>Kawsay</b> - Todos los Derechos Reservados.</small>
+             </div>
+
+</section>
+
+
+</body>
+</html>
