@@ -87,7 +87,7 @@ public class UsuarioService implements IUsuarioService {
 	@Override
 	public ResponseUsuario<Usuario> editarUsuario( Integer ID) {
 
-		ResponseUsuario<Usuario> responseusuario = new Responseusuario<>();
+		ResponseUsuario<Usuario> responseusuario = new ResponseUsuario<>();
 		
 		try {
 			Optional<Usuario> p = usuarioRepository.findById(ID);

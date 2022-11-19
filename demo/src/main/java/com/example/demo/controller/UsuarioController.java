@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import javax.validation.Valid;
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,16 +18,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.multipart.MultipartFile;
-
-import com.example.demo.models.Catalogo;
 import com.example.demo.models.Usuario;
 import com.example.demo.models.ResponseUsuario;
 import com.example.demo.service.IUsuarioService;
-import com.example.demo.serviceinterface.ICatalogoService;
+
 
 @Controller
 @RequestMapping("/app")
-@SessionAttributes("usuario")
 public class UsuarioController {
 
 	@Value("${title.generic}")
@@ -37,7 +35,7 @@ public class UsuarioController {
 
 	@Autowired
 	@Qualifier("servicio1")
-	private IPersonajeService InterfacePersonaje1;
+	private IUsuarioService InterfaceUsuario1;
 	
 
 	@GetMapping({"/home" })
@@ -62,7 +60,15 @@ public class UsuarioController {
 	public String Login( Model model) {
 		return "login";
 	}
-}
+	@GetMapping({"/catalogo"})
+	public String Catalogo( Model model) {
+		return "catalogo";
+	}
+	@GetMapping({"/usuario"})
+	public String usuario( Model model) {
+		return "usuario";
+	}
+
 	
 	
 
@@ -78,7 +84,7 @@ public class UsuarioController {
 
 		model.addAttribute("TituloPagina", titlePage);
 		model.addAttribute("titulo", "Formuario Usuario");
-		Response<Usuario> rspta = InterfaceUsuario1.listarUsuario();
+		ResponseUsuario<Usuario> rspta = InterfaceUsuario1.listarUsuario();
 
 		if (rspta.getEstado()) {
 			model.addAttribute("Mensaje", rspta.getMensaje());
@@ -92,7 +98,7 @@ public class UsuarioController {
 	}
 
 	@GetMapping("/crear")
-	public String Formulario(Model model) {
+	public String usuario(Model model) {
 		Usuario usuario = new Usuario();
 
 		model.addAttribute("TituloPagina", titlePage);
@@ -139,7 +145,7 @@ public class UsuarioController {
 			return "usuario";
 		}
 
-		Response<Usuario> rspta = InterfaceUsuario1.crearUsuario(Luffy, fileRecibido);
+		ResponseUsuario<Usuario> rspta = InterfaceUsuario1.crearUsuario(Luffy, fileRecibido);
 
 		if (rspta.getEstado()) {
 

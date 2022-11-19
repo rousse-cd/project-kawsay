@@ -36,11 +36,11 @@ public class Usuario {
 	
 		
 	
-	public int getIdPersonaje() {
-		return idPersonaje;
+	public int getIdUsuario() {
+		return idUsuario;
 	}
-	public void setIdPersonaje(int idPersonaje) {
-		this.idPersonaje = idPersonaje;
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
 	}
 	
 	public String getUriImagen() {
