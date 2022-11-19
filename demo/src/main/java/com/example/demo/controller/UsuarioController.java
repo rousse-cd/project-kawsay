@@ -83,11 +83,11 @@ public class UsuarioController {
 		if (rspta.getEstado()) {
 			model.addAttribute("Mensaje", rspta.getMensaje());
 			model.addAttribute("listita", rspta.getListData());
-			return "lista";
+			return "ListaUsuario";
 		} else {
 			model.addAttribute("mensaje", rspta.getMensaje());
 			model.addAttribute("mensajeError", rspta.getMensajeError());
-			return "errores";
+			return "ErroresUsuario";
 		}
 	}
 
@@ -99,7 +99,7 @@ public class UsuarioController {
 		model.addAttribute("titulo", "Formulario - Crear Usuario");
 		model.addAttribute("personaje", usuario);
 
-		return "Formulario";
+		return "usuario";
 	}
 
 	@GetMapping("/Editar/{idUsuario}")
@@ -111,9 +111,9 @@ public class UsuarioController {
 
 		model.addAttribute("titulo", "KAWSAY - Editando el usuario " + rspta.getData().getNombres());
 
-		model.addAttribute("personaje", rspta.getData());
+		model.addAttribute("usuario", rspta.getData());
 
-		return "Formulario";
+		return "usuario";
 	}
 
 	@GetMapping("/Elimnar/{idUsuario}")
@@ -127,16 +127,16 @@ public class UsuarioController {
 			model.addAttribute("mensaje", rspta.getMensaje());
 			model.addAttribute("mensajeError", rspta.getMensajeError());
 
-			return "errores";
+			return "ErroresUsuario";
 		}
 	}
 
-	@PostMapping("/form")
+	@PostMapping("/usuario")
 	public String creaUsuario(@Valid Usuario Luffy, BindingResult result, Model model,
 			@RequestParam("ImagenDelFormulario") MultipartFile fileRecibido, SessionStatus sStatus) {
 
 		if (result.hasErrors()) {
-			return "Formulario";
+			return "usuario";
 		}
 
 		Response<Usuario> rspta = InterfaceUsuario1.crearUsuario(Luffy, fileRecibido);
@@ -149,7 +149,7 @@ public class UsuarioController {
 		} else {
 			model.addAttribute("mensaje", rspta.getMensaje());
 			model.addAttribute("mensajeError", rspta.getMensajeError());
-			return "errores";
+			return "ErroresEncontrados";
 		}
 
 	}
