@@ -10,35 +10,35 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.models.Catalogo;
-import com.example.demo.serviceinterface.ICatalogoService;
+import com.example.demo.models.Proveedores;
+import com.example.demo.serviceinterface.IProveedorService;
 
 @Controller
 @RequestMapping
-public class CatalogoControler {
+public class ProveedorController {
 	
 	@Autowired
-	private ICatalogoService service;
+	private IProveedorService service;
 	
 	@GetMapping("/listar")
 	public String listar(Model model) {
-		model.addAttribute("catalogos", service.listar());
-		return "catalogo2";
+		model.addAttribute("proveedores", service.listar());
+		return "proveedor2";
 	}
 	@GetMapping("/listar/{id}")
 	public String listarId(@PathVariable int id,Model model) {
-		model.addAttribute("catalogo", service.listarId(id));
+		model.addAttribute("proveedor", service.listarId(id));
 		return "form";
 	}
 
 	@GetMapping("/new")
 	public String nuevo(Model model) {
-		model.addAttribute("catalogo", new Catalogo());
+		model.addAttribute("proveedor", new Proveedores());
 		return "form";
 	}
 	
 	@PostMapping("/save")
-	public String save(@Valid Catalogo p,Model model) {
+	public String save(@Valid Proveedores p,Model model) {
 		int id=service.save(p);
 		if(id==0) {
 			return "form";
