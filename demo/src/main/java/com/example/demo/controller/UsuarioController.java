@@ -65,7 +65,7 @@ public class UsuarioController {
 		return "catalogo";
 	}
 	@GetMapping({"/usuario"})
-	public String usuario( Model model) {
+	public String usuario2( Model model) {
 		return "usuario";
 	}
 
