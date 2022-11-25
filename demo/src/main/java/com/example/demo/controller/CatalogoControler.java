@@ -30,7 +30,8 @@ public class CatalogoControler {
 		model.addAttribute("catalogo", service.listarId(id));
 		return "form";
 	}
-
+	
+//	a
 	@GetMapping("/new")
 	public String nuevo(Model model) {
 		model.addAttribute("catalogo", new Catalogo());
