@@ -2,8 +2,7 @@
 <html xmlns:th="http://thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title th:text="${TituloPagina}"></title>
-
+<title>Nosotros</title>
 <link rel="stylesheet" href="/css/nosotros.css" />
 <link rel="stylesheet" href="/css/footer.css" />
 <link rel="stylesheet" href="/bootstrap/bootstrap.min.css"  />
@@ -14,9 +13,6 @@
 </head>
 <body>
 
-
-
-
 <nav class="navbar navbar-expand-lg navbar-light bg-green" style="background-color:#96C689">
   <a class="navbar-brand" href="Home">KAWSAY</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +20,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarScroll">
     <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="Home">INICIO</a>
       </li>
       <li class="nav-item">
@@ -47,7 +43,6 @@
   </div>
 </nav>
 
-
 <div class=prueba1></div>
 <section class="home" id="home">
 
@@ -58,107 +53,51 @@
 
 </section>
 
-<!-- -que somos -->
-<section class="about" id="about">
 
-        <h1 class="heading"> <span>Nuestro</span> servicio </h1>
-        
-        <div class="row">
-    
-            <div class="image">
-                <img src="/images/undraw_palette_-110-c.svg" alt="">
-            </div>
-    
-            <div class="content">
-                <h3 class="title">Kawsay</h3>
-                <p>Nuestro proyecto KAWSAY consiste en el intercambio de puntos por materiales reciclables como 
-                cartón, metal, vidrio, papel y plástico. Al acumular puntos, los usuarios podrán canjearlos por 
-                productos básicos de primera necesidad. Los usuarios solo deben llevar sus residuos sólidos al 
-                punto de intercambio más cercano, y el encargado los pesará de acuerdo al material 
-                llevado, y respecto a la cantidad que lleve, se le otorgarán puntos correspondientes.</p>
-                <!---<a href="#" class="btn">learn more</a>--->
-                
-            </div>
-    
-        </div>
-    
-    </section>
-
-
-
-
-<!-- vision y mission -->
-<section class="features" id="features">
-
-    <h1 class="heading"> Nuestro  <span>enfoque</span> </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <img src="/images/undraw_directions_re_kjxs.svg" alt="">
-            <h3>Puntos de reciclaje accesibles</h3>
-            <p>Contamos con los mejores puntos de acceso a todo distrtito, 
-            ya que también pensamos en su bienestar y comodidad. Asimismo dar a 
-            entender que no hay excusa para no contribuir con el medio ambiente.</p>
-        </div>
-
-        <div class="box">
-            <img src="/images/undraw_join_re_w1lh.svg" alt="">
-            <h3>Calidad de atención</h3>
-            <p>KAWSAY tiene el compromiso de entregarle una excelente atención ya que 
-            capacitamos a nuestro personal para que tenga siempre una experiencia de 
-            usuario agradable y dinámica.</p>
-        </div>
-        
-        <div class="box">
-            <img src="/images/undraw_quitting_time_re_1whp.svg" alt="">
-            <h3>Intercambio de víveres por puntos</h3>
-            <p>Desde que se fundó, KAWSAY se ha tenido en mente esta dinámica 
-            para poder incentivar a las personas que ayudando al medio ambiente, también se ayudan así mismos.</p>
-        </div>
+<div class="container mt-4">
+	<a class="btn btn-primary" th:href="@{/contacto/new}">Agregar Nuevo</a>
+		<table border="1" class="table">
+			<thead style="background-color: #5BA5EA">
+				<tr>
+					<th>ID</th>
+					
+					<th>Nombres</th>
+					<th>Apellidos</th>					
+					<th>Correo</th>
+					<th>Asunto</th>
+					<th>Mensaje</th>
+					<th>Acciones</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contacto:${contactos}">
+					<td th:text="${contacto.id}"></td>
+					<td th:text="${contacto.nombre}" ></td>
+					<td th:text="${contacto.apellido}"></td>
+					<td th:text="${contacto.correo}"></td>
+					<td th:text="${contacto.asunto}"></td>
+					<td th:text="${contacto.mensaje}"></td>
+					<td>
+					<a th:href="@{/contacto/editar/}+${contacto.id}"><button type="button" class="btn btn-success">editar</button></a>
+					<a th:href="@{/contacto/eliminar/}+${contacto.id}" href="#"><button type="button" class="btn btn-danger">eliminar</button></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
 
 
-    </div>
 
-</section>
 
-<section class="valores" id="valores">
 
-    <h1 class="heading"> Cómo <span>funciona</span> </h1>
 
-    <div class="box-container">
 
-        <div class="box">
-            <img src="/images/papelera-de-reciclaje.png" alt="">
-            <h3>Primero</h3>
-            <p>Lleva tus residuos reciclables a los establecimientos autorizados</p>
-        </div>
-
-        <div class="box">
-            <img src="/images/registro-en-linea.png" alt="">
-            <h3>Segundo</h3>
-            <p>Nuestro personal registrará tus datos con su peso respectivo</p>
-        </div>
-
-        <div class="box">
-            <img src="/images/bonus.png" alt="">
-            <h3>Tercero</h3>
-            <p>Te daremos puntos según la cantidad de material que llevaste</p>
-        </div>
-
-        <div class="box">
-            <img src="/images/productos.png" alt="">
-            <h3>Cuarto</h3>
-            <p>Acumula puntos y canjea por productos básicos para tu consumo</p>
-        </div>
-
-    </div>
-
-</section>
 
 
 <div style="width: 100%; height: 10px; background-color: #96C689"></div>
+<!-- footer -->
 <section class="footer">
 
     <div class="box-container">
@@ -205,8 +144,7 @@
              </div>
 
 </section>
-  
-<script src="/boostrap/bootstrap.jquery.slim.min.js"></script>
-<script src="/boostrap/bootstrap.bundle.min.js"></script>
+
+
 </body>
 </html>

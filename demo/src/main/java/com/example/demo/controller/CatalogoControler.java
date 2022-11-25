@@ -101,4 +101,9 @@ public class CatalogoControler {
 	public String Login( Model model) {
 		return "login";
 	}
+	@GetMapping({"/contacto"})
+	public String Contacto( Model model) {
+		return "contacto";
+	}
+	
 }
