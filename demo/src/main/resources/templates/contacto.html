@@ -55,7 +55,7 @@
 
 
 <div class="container mt-4">
-	<a class="btn btn-primary" th:href="@{/new}">Agregar Nuevo</a>
+	<a class="btn btn-primary" th:href="@{/contacto/new}">Agregar Nuevo</a>
 		<table border="1" class="table">
 			<thead style="background-color: #5BA5EA">
 				<tr>
@@ -79,8 +79,8 @@
 					<td th:text="${contacto.asunto}"></td>
 					<td th:text="${contacto.mensaje}"></td>
 					<td>
-					<a th:href="@{/editar/}+${contacto.id}"><button type="button" class="btn btn-success">editar</button></a>
-					<a th:href="@{/eliminar/}+${contacto.id}" href="#"><button type="button" class="btn btn-danger">eliminar</button></a>
+					<a th:href="@{/contacto/editar/}+${contacto.id}"><button type="button" class="btn btn-success">editar</button></a>
+					<a th:href="@{/contacto/eliminar/}+${contacto.id}" href="#"><button type="button" class="btn btn-danger">eliminar</button></a>
 					</td>
 				</tr>
 			</tbody>

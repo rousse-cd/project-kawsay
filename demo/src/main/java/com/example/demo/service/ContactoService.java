@@ -25,14 +25,14 @@ public class ContactoService implements IcontactoService{
 	@Override
 	public Optional<Contacto> listarId(int id) {
 		return data.findById(id);
-		
+
 	}
 
 	@Override
 	public int save(Contacto c) {
 		int res = 0;
 		Contacto contacto = data.save(c);
-		
+
 		if (!contacto.equals(null)) {
 			res=1;
 		}
@@ -43,7 +43,7 @@ public class ContactoService implements IcontactoService{
 	@Override
 	public void delete(int id) {
 		data.deleteById(id);
-		
+
 	}
 
 }

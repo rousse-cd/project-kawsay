@@ -59,7 +59,7 @@
 
 	<div class="container mt-4">
 		<h3>Formulario de contacto</h3>
-		<form th:action="@{/save}" th:object=${contacto} method="POST">
+		<form th:action="@{/contacto/save}" th:object=${contacto} method="POST">
 			<div class="row">
 			
 			<div class="form-group">
@@ -97,10 +97,10 @@
 			<div class="col-auto">
                       <button type="submit" class="btn btn-primary mb-3">Guardar</button>
                   
-				<a th:href="@{/listar}"><button type="button" class="btn btn-danger">Regresar</button></a>
+				<a th:href="@{/contacto/listar}"><button type="button" class="btn btn-danger">Regresar</button></a>
 			</div>
 			
-			<div class="espacio"></div>
+			
 		</form>
 
 	</div>

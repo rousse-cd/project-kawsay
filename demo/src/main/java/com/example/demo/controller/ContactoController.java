@@ -17,52 +17,52 @@ import com.example.demo.models.Contacto;
 import com.example.demo.serviceinterface.IcontactoService;
 
 @Controller
-@RequestMapping
+@RequestMapping("/contacto")
 public class ContactoController {
-	
-	
+
+
 	@Autowired
 	private IcontactoService service;
-	
+
 	@GetMapping("/listar")
 	public String listarContacto(Model model) {
 		List<Contacto> contactos = service.listar();
 		model.addAttribute("contactos",contactos);
 		return "contacto";
 	}
-	
+
 	@GetMapping("/new")
 	public String agregarContacto(Model model) {
-		
+
 		model.addAttribute("contacto",new Contacto ());
 		return "formcontacto";
 	}
 	@PostMapping("/save")
 	public String saveContacto (@Valid Contacto c, Model model) {
 		service.save(c);
-		return "redirect:/listar";
+		return "redirect:/contacto/listar";
 	}
-	
+
 	@GetMapping("/editar/{id}")
 	public String editarContacto(@PathVariable int id, Model model) {
-		
+
 		Optional <Contacto> contacto = service.listarId(id);
 		model.addAttribute("contacto", contacto);
-				
+
 		return "formcontacto";
 	}
-	
+
 	@GetMapping("/eliminar/{id}")
 	public String eliminarContacto(Model model,@PathVariable int id) {
-		
+
 		Optional <Contacto> contacto = service.listarId(id);
 		model.addAttribute("contacto", contacto);
 		service.delete(id);
-				
-		return "redirect:/listar";
+
+		return "redirect:/contacto/listar";
 	}
 
-	
+
 //	rutas controller
 	@GetMapping({"/home" })
 	public String home( Model model) {
@@ -72,7 +72,7 @@ public class ContactoController {
 	public String registro( Model model) {
 		return "registro";
 	}
-	
+
 	@GetMapping({"/nosotros" })
 	public String nosotros( Model model) {
 		return "nosotros";
@@ -90,5 +90,5 @@ public class ContactoController {
 	public String Contacto( Model model) {
 		return "contacto";
 	}
-	
+
 }
