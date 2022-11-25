@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Usuario</title>
+<link rel="stylesheet" href="@{/bootstrap/bootstrap.min.css}">
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-green" style="background-color:#96C689">
+  <a class="navbar-brand" href="#">KAWSAY</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+      <li class="nav-item">
+        <a class="nav-link" href="home.html">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="nosotros.html">NOSOTROS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="catalogo.html">CATÁLOGO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">LOGIN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="usuario.html">FORMULARIO USUARIO</a>
+      </li>
+    </ul>
+    
+    <form class="d-flex">
+      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+     
+     <div class="container mt-2">
+		<div class="jumbotron">
+			<h1 class="display-4" th:text="${titulo}"></h1>
+			<p class="lead" th:text="${Estado}"></p>
+			<hr class="my-4">
+
+			<div>
+				<form th:action="@{/app/form}" th:object="${usuario}"  method="post" enctype="multipart/form-data">				
+				
+					<div class="form-group">
+						<label for="idNombres">Nombres</label> 
+						<input type="text" name="nombres" class="form-control" id="idNombres" th:field="*{nombres}"> 
+						<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('nombres')}"  th:errors="*{nombres}" ></div>
+					</div>
+					
+					<div class="form-group">
+						<label for="idApellidos">Apellidos</label> 
+						<input type="text" name="apellidos"  class="form-control" id="idApellidos" th:field="*{apellidos}"> 
+						<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('apellidos')}"  th:errors="*{alias}" ></div>
+					</div>
+					
+					<div class="form-group">
+						<label for="idEdad">Edad</label> 
+						<input type="text" name="edad" class="form-control" id="idEdad" th:field="*{edad}"> 
+						<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('edad')}"  th:errors="*{edad}" ></div>
+					</div>
+					
+					<div class="form-group">
+						<label for="idCorreo">Correo</label> 
+						<input type="text" name="correo" class="form-control" id="idCorreo" th:field="*{correo}"> 
+						<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('correo')}"  th:errors="*{correo}" ></div>
+					</div>
+					
+					<div class="form-group">
+						<label for="idDNI">DNI</label> 
+						<input type="text" name="dni" class="form-control" id="idDNI" th:field="*{dni}"> 
+						<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('dni')}"  th:errors="*{dni}" ></div>
+					</div>
+					
+					<div class="form-group">
+						<label for="idTelefono">Telefono</label> 
+						<input type="text" name="telefono" class="form-control" id="idTelefono" th:field="*{telefono}"> 
+						<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('telefono')}"  th:errors="*{telefono}" ></div>
+					</div>
+					
+					<div class="form-group">
+						<label for="idUriImagen">Enlace Imagen</label> 
+						<input type="file" name="ImagenDelusuario" class="form-control" id="idUriImagen">
+					</div>
+					
+					<button type="submit" class="btn btn-success">Crear Usuario</button>
+				</form>
+			</div>			
+
+		</div>
+	</div>
+
+
+	<script src="/bootstrap/jquery.slim.min.js"></script>
+	<script src="/bootstrap/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>

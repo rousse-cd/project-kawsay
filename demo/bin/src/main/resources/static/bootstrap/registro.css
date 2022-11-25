@@ -1,0 +1,165 @@
+body{
+	background-color:white;
+	
+}
+.navbar-brand{
+	padding-left:10%
+}
+
+.image-container{
+	width:50%;
+	height:30%;
+}
+
+#grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 800px 500px;
+  justify-content: center;
+    box-shadow: 10px 10px 40px #592A08;
+   border: 1px solid #ccc;
+}
+
+#areaA {
+  
+  background-image:url(2.jpg);
+  opacity: 1;
+  
+}
+
+#areaB {
+  background-color: black;
+}
+
+
+
+
+
+
+form .gender-details{
+    align-items: left;
+    margin: auto;
+    width: 80%;
+}
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+form .category{
+     display: rigth;
+     width: 80%;
+     margin: 14px 0 ;
+     justify-content: space-between;
+}
+form .category label{
+     display: flex;
+     align-items: left;
+     cursor: pointer;
+     margin-left: 10px;
+}
+form .category label .dot{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+     background: #9b59b6;
+     border-color: #d9d9d9;
+}
+form input[type="radio"]{
+     display: none;
+}
+
+
+.boton{
+	display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+.footer{
+    background: #fff;
+}
+
+.footer .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 20px;
+    color:var(--black);
+    padding:15px;
+}
+
+.footer .box-container .box h3 i{
+    color:#96C689;
+}
+
+.footer .box-container .box .links{
+    display: block;
+    font-size: 15px;
+    color:var(--light-color);
+    padding:1rem 0;
+}
+
+.footer .box-container .box .links i{
+    color:#96C689;
+    padding-right: .5rem;
+}
+
+.footer .box-container .box .links:hover i{
+    padding-right: 2rem;
+}
+
+
+.footer .box-container .box p{
+    line-height: 1.8;
+    font-size: 15px;
+    color:var(--light-color);
+    padding:1rem 0;
+}
+
+.footer .box-container .box .share a{
+    height:40px;
+    width:40px;
+    line-height:40px;
+    border-radius: .5rem;
+    font-size: 20px;
+    color:var(--black);
+    margin-right: .2rem;
+    background: #eee;
+    text-align: center;
+}
+
+.footer .box-container .box .share a:hover{
+    background: #96C689;
+    color: #fff;
+}
+.footer .box-container .box .email{
+    width: 100%;
+    margin:.7rem 0;
+    padding:10px;
+    border-radius: .5rem;
+    background: #eee;
+    font-size: 15px;
+    color:var(--black);
+    text-transform: none;
+}
+
+.footer .credit{
+    text-align: center;
+    margin-top: 2rem;
+    padding:20px;
+    font-size: 20px;
+    color:var(--black);
+    border-top: var(--border);
+}

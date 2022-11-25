@@ -8,7 +8,10 @@
 <body>
 	<div class="container mt-4">
 	<div class="col-sm-6">
-		<form th:action="@{/save}" th:object="${catalogo}" method="POST">
+		<form th:action="@{/save}" th:object="${catalogo}" method="POST" enctype="multipart/form-data">
+		
+		<div class="alert alert-success" role="alert" th:if="${success != null}" th:text="${success}"></div>
+		
 			<div class="card">
 			<div class="card-header">
 			<h3>Modulo catalogo</h3>
@@ -18,8 +21,9 @@
 					<label>ID</label> <input type="text" th:field="*{id}" readonly="readonly" />
 				</div>
 				<div class="mb-3">
-					<label>IMAGEN</label> <input type="text" th:field="*{image}" />
-				</div>
+                     <label for="formFileSm" class="form-label">Subir imagen</label>
+                     <input class="form-control form-control-sm" id="formFileSm" type="file" name="file">
+                </div>
 				<div class="mb-3">
 					<label>NOMBRE</label> <input type="text" th:field="*{nombre}" />
 				</div>
