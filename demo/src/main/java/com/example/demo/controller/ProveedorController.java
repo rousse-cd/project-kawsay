@@ -14,7 +14,7 @@ import com.example.demo.models.Proveedores;
 import com.example.demo.serviceinterface.IProveedorService;
 
 @Controller
-@RequestMapping
+@RequestMapping("/provedores")
 public class ProveedorController {
 	
 	@Autowired
@@ -50,29 +50,5 @@ public class ProveedorController {
 	public String eliminar(@PathVariable int id,Model model) {
 		service.delete(id);
 		return "redirect:/listar";
-	}
-	
-//	rutas controller
-	@GetMapping({"/home" })
-	public String home( Model model) {
-		return "Home";
-	}
-	@GetMapping({"/registro" })
-	public String registro( Model model) {
-		return "registro";
-	}
-	
-	@GetMapping({"/nosotros" })
-	public String nosotros( Model model) {
-		return "nosotros";
-	}
-
-	@GetMapping({"/integrantes"})
-	public String integrantes( Model model) {
-		return "integrantes";
-	}
-	@GetMapping({"/login"})
-	public String Login( Model model) {
-		return "login";
 	}
 }
