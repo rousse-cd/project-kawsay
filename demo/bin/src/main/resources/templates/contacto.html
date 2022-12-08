@@ -14,7 +14,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-green" style="background-color:#96C689">
-  <a class="navbar-brand" href="#">KAWSAY</a>
+  <a class="navbar-brand" href="Home">KAWSAY</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -27,10 +27,13 @@
         <a class="nav-link" href="nosotros">NOSOTROS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">CATÁLOGO</a>
+        <a class="nav-link" href="listar">CATÁLOGO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">LOGIN</a>
+        <a class="nav-link" href="contacto">CONTACTO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login">LOGIN</a>
       </li>
     </ul>
     <form class="d-flex">
@@ -40,38 +43,57 @@
   </div>
 </nav>
 
-<main>
+<div class=prueba1></div>
+<section class="home" id="home">
+
+    <div class="content">
+        <h3><span>Bienvenidos</span> a Kawsay</h3>
+        <p>Centro de intercambio de residuos reciclables, con el objetivo de generar un mejor desarrollo sostenible a nivel nacional.</p>
+    </div>
+
+</section>
+
 
 <div class="container mt-4">
-	<a class="btn btn-primary" th:href="@{/new}">Agreagar Nuevo</a>
+	<a class="btn btn-primary" th:href="@{/contacto/new}">Agregar Nuevo</a>
 		<table border="1" class="table">
 			<thead style="background-color: #5BA5EA">
 				<tr>
-					<th>#</th>
-					<th>IMAGEN</th>
-					<th>NOMBRE</th>					
-					<th>CANTIDAD</th>
-					<th>PUNTOS</th>
-					<th></th>
+					<th>ID</th>
+					
+					<th>Nombres</th>
+					<th>Apellidos</th>					
+					<th>Correo</th>
+					<th>Asunto</th>
+					<th>Mensaje</th>
+					<th>Acciones</th>
+					
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="p:${catalogos}">
-					<td th:text="${p.id}"></td>
-					<td><img th:src="@{'/uploads/'} + ${p.image}" th:alt="${p.image}" width="20%"></td>
-					<td th:text="${p.nombre}"></td>
-					<td th:text="${p.cantidad}"></td>
-					<td th:text="${p.puntos}"></td>
+				<tr th:each="contacto:${contactos}">
+					<td th:text="${contacto.id}"></td>
+					<td th:text="${contacto.nombre}" ></td>
+					<td th:text="${contacto.apellido}"></td>
+					<td th:text="${contacto.correo}"></td>
+					<td th:text="${contacto.asunto}"></td>
+					<td th:text="${contacto.mensaje}"></td>
 					<td>
-					<a th:href="@{/listar/}+${p.id}"><button type="button" class="btn btn-success">editar</button></a>
-					<a th:onclick="eliminar([[${p.id}]])" href="#"><button type="button" class="btn btn-danger">delete</button></a>
+					<a th:href="@{/contacto/editar/}+${contacto.id}"><button type="button" class="btn btn-success">editar</button></a>
+					<a th:href="@{/contacto/eliminar/}+${contacto.id}" href="#"><button type="button" class="btn btn-danger">eliminar</button></a>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 
-</main>
+
+
+
+
+
+
+
 
 
 <div style="width: 100%; height: 10px; background-color: #96C689"></div>
@@ -104,6 +126,7 @@
             <a href="#" class="links"> <i class="fas fa-arrow-right"></i> inicio </a>
             <a href="#" class="links"> <i class="fas fa-arrow-right"></i> nosotros </a>
             <a href="#" class="links"> <i class="fas fa-arrow-right"></i> catalogo </a>
+            <a href="contacto" class="links"> <i class="fas fa-arrow-right"></i> contacto </a>
         </div>
 
         <div class="box">
