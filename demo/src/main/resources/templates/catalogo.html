@@ -21,13 +21,16 @@
   <div class="collapse navbar-collapse" id="navbarScroll">
     <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
       <li class="nav-item">
-        <a class="nav-link" href="Home">INICIO</a>
+        <a class="nav-link" href="/home">INICIO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="nosotros">NOSOTROS</a>
+        <a class="nav-link" href="/provedores/listar">PROVEDORES</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">CATÁLOGO</a>
+        <a class="nav-link" href="/catalogo/listar">CATÁLOGO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contacto/listar">CONTACTOS</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">LOGIN</a>
@@ -43,7 +46,7 @@
 <main>
 
 <div class="container mt-4">
-	<a class="btn btn-primary" th:href="@{/new}">Agreagar Nuevo</a>
+	<a class="btn btn-primary" th:href="@{/catalogo/new}">Agreagar Nuevo</a>
 		<table border="1" class="table">
 			<thead style="background-color: #5BA5EA">
 				<tr>
@@ -63,8 +66,8 @@
 					<td th:text="${p.cantidad}"></td>
 					<td th:text="${p.puntos}"></td>
 					<td>
-					<a th:href="@{/listar/}+${p.id}"><button type="button" class="btn btn-success">editar</button></a>
-					<a th:onclick="eliminar([[${p.id}]])" href="#"><button type="button" class="btn btn-danger">delete</button></a>
+					<a th:href="@{/catalogo/listar/}+${p.id}"><button type="button" class="btn btn-success">editar</button></a>
+					<a th:href="@{/catalogo/delete/} + ${p.id} "><button type="button" class="btn btn-danger">delete</button></a>
 					</td>
 				</tr>
 			</tbody>

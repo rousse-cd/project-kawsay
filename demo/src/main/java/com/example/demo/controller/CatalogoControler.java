@@ -18,11 +18,10 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.models.Catalogo;
-import com.example.demo.modelsDAO.ICatalogo;
 import com.example.demo.serviceinterface.ICatalogoService;
 
 @Controller
-@RequestMapping
+@RequestMapping("/catalogo")
 public class CatalogoControler {
 	
 	@Autowired
@@ -69,41 +68,13 @@ public class CatalogoControler {
 			flash.addFlashAttribute("Success", "Foto subida!!");
 		}
 		
-		return "redirect:/listar";
+		return "redirect:/catalogo/listar";
 	}
 	
 	@GetMapping("/delete/{id}")
 	public String eliminar(@PathVariable int id,Model model) {
 		service.delete(id);
-		return "redirect:/listar";
-	}
-	
-//	rutas controller
-	@GetMapping({"/home" })
-	public String home( Model model) {
-		return "Home";
-	}
-	@GetMapping({"/registro" })
-	public String registro( Model model) {
-		return "registro";
-	}
-	
-	@GetMapping({"/nosotros" })
-	public String nosotros( Model model) {
-		return "nosotros";
-	}
-
-	@GetMapping({"/integrantes"})
-	public String integrantes( Model model) {
-		return "integrantes";
-	}
-	@GetMapping({"/login"})
-	public String Login( Model model) {
-		return "login";
-	}
-	@GetMapping({"/contacto"})
-	public String Contacto( Model model) {
-		return "contacto";
+		return "redirect:/catalogo/listar";
 	}
 	
 }

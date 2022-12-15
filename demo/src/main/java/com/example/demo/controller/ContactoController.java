@@ -61,34 +61,6 @@ public class ContactoController {
 
 		return "redirect:/contacto/listar";
 	}
-
-
-//	rutas controller
-	@GetMapping({"/home" })
-	public String home( Model model) {
-		return "Home";
-	}
-	@GetMapping({"/registro" })
-	public String registro( Model model) {
-		return "registro";
-	}
-
-	@GetMapping({"/nosotros" })
-	public String nosotros( Model model) {
-		return "nosotros";
-	}
-
-	@GetMapping({"/integrantes"})
-	public String integrantes( Model model) {
-		return "integrantes";
-	}
-	@GetMapping({"/login"})
-	public String Login( Model model) {
-		return "login";
-	}
-	@GetMapping({"/contacto"})
-	public String Contacto( Model model) {
-		return "contacto";
-	}
-
+	
+	
 }
