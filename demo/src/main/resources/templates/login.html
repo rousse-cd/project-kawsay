@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -39,7 +40,7 @@
 	
 	<div class="contenedor">
 	<h2 class="login">Login</h2><br>
-	<form action="main.html" th:action="@{/login.html}" method="post">
+	<form th:action="@{/iniciarsession}" method="post">
 		<div class="form-group">
 			<label for="username">Usuario</label>
         	<input type="text" class="form-control" id="username" name="username" autofocus="autofocus">
@@ -60,7 +61,7 @@
         </div>
         
         <div class="form-group">
-        	<button type="submit" class="boton" value="Login">Ingresar</button>
+        	<button type="submit" class="boton" value="Login">login</button>
         </div>
         
         <div class="letras">
@@ -68,9 +69,9 @@
         </div>
 	</form>
 	</div>
-	<div class="img">
+	<!-- <div class="img">
 		<img alt="imagen" src="/images/mundito1.png">
-	</div>
+	</div> -->
 
 </body>
 </html>
