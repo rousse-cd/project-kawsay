@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 	
 //	rutas controller
-	@GetMapping({"/home" })
+	@GetMapping({"/" })
 	public String home( Model model) {
 		return "Home";
 	}
