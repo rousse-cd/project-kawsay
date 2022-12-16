@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org">
+<html xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
 <meta charset="UTF-8">
 <title th:text="${TituloPagina}"></title>
@@ -25,19 +25,16 @@
   <div class="collapse navbar-collapse" id="navbarScroll">
     <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
       <li class="nav-item active">
-        <a class="nav-link" href="Home">INICIO</a>
+        <a class="nav-link" href="home">INICIO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="nosotros">NOSOTROS</a>
+        <a class="nav-link" href="/provedores/listar">PROVEDORES</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="listar">CATÁLOGO</a>
+        <a class="nav-link" href="/catalogo/listar">CATÁLOGO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contacto">CONTACTO</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login">LOGIN</a>
+        <a class="nav-link" href="/contacto/listar">CONTACTOS</a>
       </li>
     </ul>
     <form class="d-flex">
