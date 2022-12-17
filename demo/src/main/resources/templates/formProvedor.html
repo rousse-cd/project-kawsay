@@ -3,50 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <title>CRUD SPRING BOOT</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/footer.css" />
+<link rel="stylesheet" href="/css/nosotros.css" />
+<link rel="stylesheet" href="/bootstrap/bootstrap.min.css" />
+<script src="/boostrap/bootstrap.jquery.slim.min.js"></script>
+<script src="/boostrap/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/35de4c0fd7.js"
+	crossorigin="anonymous"></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+	crossorigin="anonymous">
 </head>
 <body>
 
-<main>
-	<div class="container mt-4">
-	<div class="col-sm-6">
-		<form th:action="@{/provedores/save}" th:object="${proveedor}" method="POST">
-		
-		<div class="alert alert-success" role="alert" th:if="${success != null}" th:text="${success}"></div>
-		
-			<div class="card">
-			<div class="card-header">
-			<h3>Modulo Provedores</h3>
+	<nav class="navbar navbar-expand-lg navbar-light bg-green"
+		style="background-color: #96C689">
+		<a class="navbar-brand" href="#">KAWSAY</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarScroll" aria-controls="navbarScroll"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarScroll">
+			<ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll"
+				style="max-height: 100px;">
+				<li class="nav-item"><a class="nav-link" href="/home">INICIO</a>
+				</li>
+				<li class="nav-item"><a class="nav-link"
+					href="/provedores/listar">PROVEDORES</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="/catalogo/listar">CATÁLOGO</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="/contacto/listar">CONTACTO</a></li>
+
+			</ul>
+			<form class="d-flex">
+				<input class="form-control mr-2" type="search" placeholder="Search"
+					aria-label="Search">
+				<button class="btn btn-outline-success" type="submit">Search</button>
+			</form>
+		</div>
+	</nav>
+
+
+
+	<div class="container mt-4" style="width: 70%">
+
+		<h3>Modulo Proveedores</h3>
+		<form th:action="@{/provedores/save}" th:object="${proveedor}"
+			method="POST">
+
+			<div class="alert alert-success" role="alert"
+				th:if="${success != null}" th:text="${success}"></div>
+
+
+			<div class="row">
+
+				<div class="col">
+					<label for="idNombres">ID</label> <input type="text" name="nombres"
+						class="form-control" th:field="*{id}">
+
+				</div>
+				<div class="col">
+					<label for="idNombres">Nombre</label> <input type="text"
+						name="nombres" class="form-control" th:field="*{nombre}">
+
+				</div>
 			</div>
-			<div class="card-body">
-				<div class="mb-3">
-					<label>ID</label> <input type="text" th:field="*{id}" readonly="readonly" />
-				</div>
-				<div class="mb-3">
-					<label>IMAGEN</label> <input type="text" th:field="*{image}" />
-				</div>
-				<div class="mb-3">
-					<label>NOMBRE</label> <input type="text" th:field="*{nombre}" />
-				</div>
-				<div class="mb-3">
-					<label>PRODUCTO</label> <input type="text" th:field="*{producto}" />
-				</div>
-				<div class="mb-3">
-					<label>RUC</label> <input type="text" th:field="*{ruc}" />
-				</div>
-			</div>
-			<div class="card-footer">
-				  <div class="col-auto">
-                      <button type="submit" class="btn btn-primary mb-3">Guardar</button>
-                  </div>
-				<a th:href="@{/provedores/listar}"><button type="button" class="btn btn-danger">Regresar</button></a>
+
+
+
+			<div class="form-group">
+				<label for="idNombres">Imagen</label> <input type="text"
+					name="nombres" class="form-control" th:field="*{image}">
 
 			</div>
+			<div class="row">
+
+				<div class="col">
+					<label for="idNombres">Producto</label> <input type="text"
+						name="nombres" class="form-control" th:field="*{producto}">
+
+				</div>
+				<div class="col">
+					<label for="idNombres">RUC</label> <input type="text"
+						name="nombres" class="form-control" th:field="*{ruc}">
+
+				</div>
+			</div>
+			<br>
+			<div class="col-auto">
+				<button type="submit" class="btn btn-primary mb-3">Guardar</button>
+				<br> <a th:href="@{/provedores/listar}"><button
+						type="button" class="btn btn-danger">Regresar</button></a>
 			</div>
 		</form>
-		</div>
+
 	</div>
-	
-</main>
+
+
+
+
+	<div
+		style="width: 100%; height: 10px; background-color: #96C689; margin-top: 20px"></div>
+	<!-- footer -->
+	<section class="footer">
+
+		<div class="box-container">
+
+			<div class="box">
+				<h3>
+					Kawsay <i class="fa-solid fa-earth-americas"></i>
+				</h3>
+				<p>Centro de intercambio de residuos reciclables, con el
+					objetivo de generar un mejor desarrollo sostenible a nivel
+					nacional.</p>
+				<div class="share">
+					<a href="#" class="fab fa-facebook-f"></a> <a href="#"
+						class="fab fa-twitter"></a> <a href="#" class="fab fa-instagram"></a>
+					<a href="#" class="fab fa-linkedin"></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<h3>Información de contacto</h3>
+				<a href="#" class="links"> <i class="fas fa-phone"></i>
+					+123-456-7890
+				</a> <a href="#" class="links"> <i class="fas fa-phone"></i>
+					+111-222-3333
+				</a> <a href="#" class="links"> <i class="fas fa-envelope"></i>
+					kawsay_recycling@gmail.com
+				</a> <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>
+					Av. Arequipa 4563, Lima - Perú
+				</a>
+			</div>
+
+			<div class="box">
+				<h3>Enlaces directos</h3>
+				<a href="#" class="links"> <i class="fas fa-arrow-right"></i>
+					inicio
+				</a> <a href="#" class="links"> <i class="fas fa-arrow-right"></i>
+					nosotros
+				</a> <a href="#" class="links"> <i class="fas fa-arrow-right"></i>
+					catalogo
+				</a> <a href="#" class="links"> <i class="fas fa-arrow-right"></i>
+					contacto
+				</a>
+			</div>
+
+			<div class="box">
+				<h3>Noticias</h3>
+				<p>suscríbase para recibir las actualizaciones</p>
+				<input type="email" placeholder="your email" class="email">
+				<input type="submit" value="Suscríbete" class="btn"
+					style="background-color: #96C689"> <img
+					src="image/payment.png" class="payment-img" alt="">
+			</div>
+
+		</div>
+
+		<div class="credit">
+			<small>&copy; 2022 <b>Kawsay</b> - Todos los Derechos
+				Reservados.
+			</small>
+		</div>
+
+	</section>
 </body>
 </html>
