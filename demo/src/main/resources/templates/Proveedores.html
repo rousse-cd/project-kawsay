@@ -27,7 +27,7 @@
         <a class="nav-link" href="/provedores/listar">PROVEDORES</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/catalogo/listar">CATÁLOGO</a>
+        <a class="nav-link" href="/catalogo/listar">CATALOGO</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/contacto/listar">CONTACTOS</a>
@@ -45,16 +45,16 @@
 
 <main>
 	<div class="container mt-4">
-	<a class="btn btn-primary" th:href="@{/provedores/new}">Añadir Proveedor</a>
-		<table border="1" class="table">
-			<thead style="background-color: #5BA5EA">
+	
+		<table border="1" class="table table-bordered">
+			<thead style="background-color: #7ED957">
 				<tr>
 					<th>#</th>
-					<th>IMAGEN</th>
-					<th>NOMBRE</th>					
-					<th>PRODUCTO</th>
+					<th>Imagen</th>
+					<th>Nombre</th>					
+					<th>Producto</th>
 					<th>RUC</th>
-					<th></th>
+					<th>Acciones</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -71,9 +71,78 @@
 				</tr>
 			</tbody>
 		</table>
+		<br>
+		<CENTER><a class="btn btn-info" th:href="@{/provedores/new}">Añadir Proveedor</a></CENTER>
 	</div>
 	
 	</main>
+	
+	
+	
+		<div style="width: 100%; height: 10px; background-color: #96C689; margin-top: 20px"></div>
+	<!-- footer -->
+	<section class="footer">
+
+		<div class="box-container">
+
+			<div class="box">
+				<h3>
+					Kawsay <i class="fa-solid fa-earth-americas"></i>
+				</h3>
+				<p>Centro de intercambio de residuos reciclables, con el
+					objetivo de generar un mejor desarrollo sostenible a nivel
+					nacional.</p>
+				<div class="share">
+					<a href="#" class="fab fa-facebook-f"></a> <a href="#"
+						class="fab fa-twitter"></a> <a href="#" class="fab fa-instagram"></a>
+					<a href="#" class="fab fa-linkedin"></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<h3>Información de contacto</h3>
+				<a href="#" class="links"> <i class="fas fa-phone"></i>
+					+123-456-7890
+				</a> <a href="#" class="links"> <i class="fas fa-phone"></i>
+					+111-222-3333
+				</a> <a href="#" class="links"> <i class="fas fa-envelope"></i>
+					kawsay_recycling@gmail.com
+				</a> <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>
+					Av. Arequipa 4563, Lima - Perú
+				</a>
+			</div>
+
+			<div class="box">
+				<h3>Enlaces directos</h3>
+				<a href="#" class="links"> <i class="fas fa-arrow-right"></i>
+					inicio
+				</a> <a href="#" class="links"> <i class="fas fa-arrow-right"></i>
+					nosotros
+				</a> <a href="#" class="links"> <i class="fas fa-arrow-right"></i>
+					catalogo
+				</a> <a href="#" class="links"> <i class="fas fa-arrow-right"></i>
+					contacto
+				</a>
+			</div>
+
+			<div class="box">
+				<h3>Noticias</h3>
+				<p>suscríbase para recibir las actualizaciones</p>
+				<input type="email" placeholder="your email" class="email">
+				<input type="submit" value="Suscríbete" class="btn"
+					style="background-color: #96C689"> <img
+					src="image/payment.png" class="payment-img" alt="">
+			</div>
+
+		</div>
+
+		<div class="credit">
+			<small>&copy; 2022 <b>Kawsay</b> - Todos los Derechos
+				Reservados.
+			</small>
+		</div>
+
+	</section>
 	
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>

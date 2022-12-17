@@ -27,7 +27,7 @@
         <a class="nav-link" href="/provedores/listar">PROVEDORES</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/catalogo/listar">CATÁLOGO</a>
+        <a class="nav-link" href="/catalogo/listar">CATALOGO</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/contacto/listar">CONTACTOS</a>
@@ -46,16 +46,16 @@
 <main>
 
 <div class="container mt-4">
-	<a class="btn btn-primary" th:href="@{/catalogo/new}">Agreagar Nuevo</a>
-		<table border="1" class="table">
-			<thead style="background-color: #5BA5EA">
+	
+		<table border="1" class="table table-bordered">
+			<thead style="background-color: #FFBD59">
 				<tr>
 					<th>#</th>
-					<th>IMAGEN</th>
-					<th>NOMBRE</th>					
-					<th>CANTIDAD</th>
-					<th>PUNTOS</th>
-					<th></th>
+					<th>Imagen</th>
+					<th>Nombre</th>					
+					<th>Cantidad</th>
+					<th>Puntos</th>
+					<th>Acciones</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -72,7 +72,10 @@
 				</tr>
 			</tbody>
 		</table>
+		<br>
+		<center><a class="btn btn-info" th:href="@{/catalogo/new}">Agregar Nuevo</a></center>
 	</div>
+	<br>
 
 </main>
 
